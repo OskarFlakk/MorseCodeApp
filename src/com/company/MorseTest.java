@@ -1,6 +1,5 @@
 package com.company;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,6 +12,12 @@ public class MorseTest {
     public void testEngAtoMorseA() {
 
         assertEquals(".-",translator.engToMorse("A"));
+    }
+
+    @Test
+    public void testEngAtoMorseQmark() {
+
+        assertEquals("..--..",translator.engToMorse("?"));
     }
 
     @Test
@@ -29,19 +34,19 @@ public class MorseTest {
 
     @Test
     public void testMorsetoEngB() {
-        TranslateMorse translator = new TranslateMorse();
+
         assertEquals("B",translator.morseToEng("-..."));
     }
 
     @Test
     public void testEngAtoMorseInvalidcharsError() {
-        TranslateMorse translator = new TranslateMorse();
-        assertEquals("error, invalid character",translator.engToMorse("Ö"));
+
+        assertEquals("errorM",translator.engToMorse("Ö"));
     }
 
     @Test
     public void testMorsetoEngInvalidcharsError() {
-        TranslateMorse translator = new TranslateMorse();
-        assertEquals("error, invalid character",translator.morseToEng("Å"));
+
+        assertEquals("errorE",translator.morseToEng("25"));
     }
 }
