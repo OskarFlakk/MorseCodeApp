@@ -3,9 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	System.out.println("Test morse code");
+    TranslateMorse Translate = new TranslateMorse();
 
-	new MorseMenu(); //start Menu
-
+        //Translate.engToMorse("B");
+        // Translate.engToMorse("-..");
     }
 }
